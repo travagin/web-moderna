@@ -18,7 +18,7 @@ const imprimirResultado = function(nota) {
     console.log('Fim')
 }
 
-console.log(10)
-console.log(8.9)
-console.log(6.55)
-console.log(-1)
+imprimeResultado(10)
+imprimeResultado(8.9)
+imprimeResultado(6.55)
+imprimeResultado(-1)
