@@ -9,6 +9,6 @@ for(let i = 0; i <=10; i++) {
 
 const notas = [6,7,8,9,10]
 for(i = 0; i <= notas.length; i++) {
-    console.log(`Notas = ${notas[i]}`)
+    console.log(`Nota = ${notas[i]}`)
 }
 
