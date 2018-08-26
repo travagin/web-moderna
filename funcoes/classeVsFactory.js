@@ -3,8 +3,8 @@ class Pessoa {
     constructor(nome, idade, sexo) {
         //Meu atributo fica público por causa do this.
         this.nome = nome,
-            this.idade = idade,
-            this.sexo = sexo
+        this.idade = idade,
+        this.sexo = sexo
     }
 
     imprimirPessoa() {
