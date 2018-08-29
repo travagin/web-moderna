@@ -1,4 +1,4 @@
-const modoDev = process.env.NODE_ENV !== 'producion'
+const modoDev = process.env.NODE_ENV !== 'production'
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UnglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -10,6 +10,10 @@ module.exports = {
     output: {
         filename: 'principal.js',
         path: __dirname + '/public'
+    },
+    devServer: {
+        contentBase: "./public",
+        port: 9000
     },
     optimization: {
         minimizer: [
@@ -34,6 +38,9 @@ module.exports = {
                 'css-loader', //interpreta @import, url()
                 'sass-loader',
             ]
+        },{
+            test: /\.(png|svg|jpg|gif)$/,
+            use: ['file-loader']
         }]
     }
 
