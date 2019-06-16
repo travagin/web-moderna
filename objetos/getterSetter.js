@@ -4,12 +4,17 @@ const sequencia = {
         return this._valor++
     },
     set valor(valor) {
-        this._valor = valor
+        console.log(this._valor)
+        if (valor > this._valor) {
+            this._valor = valor
+        } else{
+            console.log('Valor inválido')
+        }
     }
 }
 
 console.log(sequencia.valor, sequencia.valor)
-sequencia.valor = 1000
+sequencia.valor = 2
 console.log(sequencia.valor, sequencia.valor)
 
 
