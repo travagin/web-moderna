@@ -18,3 +18,39 @@ Object.entries(pessoa).forEach(([chave,valor])=>{
     console.log(`${chave}: ${valor}`)
 })
 
+// Construir um objeto pessoa, com atribtos
+
+const Pessoa2 = {
+    nome: 'Lucas Travagin Pereira',
+    genero: 'M',
+    idade: 21,
+    escolaridade: 'Ensino Superior'
+}
+
+// let chaves = Object.keys(Pessoa2)
+// let valores = Object.values(Pessoa2)
+// let toArray = Object.entries(Pessoa2)
+
+
+// toArray.forEach(element => {
+//     console.log(`${element[0]}: ${element[1]}`)
+// })
+
+Object.defineProperty(Pessoa2, 'dataNascimento', {
+    enumerable: true,
+    writable: false,
+    value: '01/01/2019'
+})
+console.log(Pessoa2)
+
+//Object assign -- COncatena os astributos dos objetos em objeto destino
+const dest = {a: 1}
+const o1 = {b: 2}
+const o2 = {c: 3, a: 4}
+
+const obj = Object.assign(dest, o1, o2)
+
+
+Object.freeze(obj)
+obj.c = 1234
+console.log(obj)
