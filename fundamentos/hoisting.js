@@ -1,5 +1,3 @@
-
-
 function teste() {
     console.log('A =', a);
     var a = 2;
