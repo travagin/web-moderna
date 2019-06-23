@@ -7,13 +7,12 @@ class Lancamento {
 
 class CicloFinanceiro {
     constructor(mes, ano) {
-        this.mes = mes
-        this.ano = ano
+        this.mes = mes,
+        this.ano = ano,
         this.lancamentos = []
     }
 
     addLancamentos(...lancamentos) {
-        ///console.log(lancamentos)
         lancamentos.forEach(element => this.lancamentos.push(element))
     }
 
@@ -26,10 +25,10 @@ class CicloFinanceiro {
     }
 }
 
-const salario = new Lancamento('Salario', 4500)
-const contaDeLuz = new Lancamento('Luz', -220)
+const contaDeLuz = new Lancamento('Luz', 150)
+const contaDeAgua = new Lancamento('Água', 80)
 
-const contas = new CicloFinanceiro(6, 2018)
-contas.addLancamentos(salario, contaDeLuz)
+const contas = new CicloFinanceiro(2, 2019)
+contas.addLancamentos(contaDeLuz, contaDeAgua)
 
-console.log(contas)
+console.log(JSON.stringify(contas))
